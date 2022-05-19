@@ -2,12 +2,7 @@
 
 Этот репозиторий создал Елькин Андрей Владиславович из группы РИС-21-2б. Репозиторий содержит решение задачи о коммивояжере и калькулятор кредитов.
 
-[*Видео с коментариями работ*](https://www.youtube.com/watch?v=CJlnWSI4Nwo)
-
-[comment]: #cover
-
-
-Download the files as a zip using the green button, or clone the repository to your machine using Git.
+[*Видео с коментариями*](https://www.youtube.com/watch?v=CJlnWSI4Nwo)
 
 ## Releases
 
