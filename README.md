@@ -1,6 +1,7 @@
 # Творческия работа
 
-This repository accompanies [*Pro ASP.NET Core MVC 2*](http://www.apress.com/9781484231494) by Adam Freeman (Apress, 2017).
+Этот репозиторий создал Елькин Андрей Владиславович из группы РИС-21-2б. Репозиторий содержит решение задачи о коммивояжере и калькулятор кредитов.
+[*Видео с коментариями работ*](https://www.youtube.com/watch?v=CJlnWSI4Nwo)
 
 [comment]: #cover
 
