@@ -13,7 +13,8 @@
 Задача заключается в том, чтобы обойти все вершины графа самым коротким путем. 
 
 
-![Alt text](https://github.com/ElkinAndrey/CreativeWork/tree/main/Images/Calculator.png)
+![Alt text](https://github.com/ElkinAndrey/CreativeWork/row
+/main/Images/Calculator.png)
 
 
 ## Калькулятор кредитов
