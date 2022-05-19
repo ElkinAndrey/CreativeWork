@@ -10,7 +10,9 @@
 
 ## Задача о коммивояжере
 
-Release v1.0 corresponds to the code in the published book, without corrections or updates.
+Задача заключается в том, чтобы обойти все вершины графа самым коротким путем. 
+
+![Image alt](https://github.com/ElkinAndrey/CreativeWork/raw/{branch}/{path}/image.png)
 
 ## Калькулятор кредитов
 
