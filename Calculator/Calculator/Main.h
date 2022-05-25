@@ -15,12 +15,12 @@ namespace Calculator {
 	public ref class Main : public System::Windows::Forms::Form
 	{
 	private:
-		double sum; // Сумма кредита
-		double percent; // Годовой процент
-		double time; // Количество лет, на которое берется кредит
-		System::DateTime date; // День, когда был взят кредит
-		bool datePrint = false; // Указан ли день
-		System::String^ period; // Как часто будет выплачиваться кредит
+		double sum; // РЎСѓРјРјР° РєСЂРµРґРёС‚Р°
+		double percent; // Р“РѕРґРѕРІРѕР№ РїСЂРѕС†РµРЅС‚
+		double time; // РљРѕР»РёС‡РµСЃС‚РІРѕ Р»РµС‚, РЅР° РєРѕС‚РѕСЂРѕРµ Р±РµСЂРµС‚СЃСЏ РєСЂРµРґРёС‚
+		System::DateTime date; // Р”РµРЅСЊ, РєРѕРіРґР° Р±С‹Р» РІР·СЏС‚ РєСЂРµРґРёС‚
+		bool datePrint = false; // РЈРєР°Р·Р°РЅ Р»Рё РґРµРЅСЊ
+		System::String^ period; // РљР°Рє С‡Р°СЃС‚Рѕ Р±СѓРґРµС‚ РІС‹РїР»Р°С‡РёРІР°С‚СЊСЃСЏ РєСЂРµРґРёС‚
 
 
 
@@ -30,19 +30,19 @@ namespace Calculator {
 		{
 			InitializeComponent();
 
-			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::Fixed3D; // Изменение стиля окна
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::Fixed3D; // РР·РјРµРЅРµРЅРёРµ СЃС‚РёР»СЏ РѕРєРЅР°
 
-			// Заполнение ComboBox
-			this->PeriodСomboBox->Items->Add("Ежегодно");
-			this->PeriodСomboBox->Items->Add("Ежеквартально");
-			this->PeriodСomboBox->Items->Add("Ежемесячно");
-			this->PeriodСomboBox->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
-			this->PeriodСomboBox->Text = "Ежегодно";
+			// Р—Р°РїРѕР»РЅРµРЅРёРµ ComboBox
+			this->PeriodРЎomboBox->Items->Add("Р•Р¶РµРіРѕРґРЅРѕ");
+			this->PeriodРЎomboBox->Items->Add("Р•Р¶РµРєРІР°СЂС‚Р°Р»СЊРЅРѕ");
+			this->PeriodРЎomboBox->Items->Add("Р•Р¶РµРјРµСЃСЏС‡РЅРѕ");
+			this->PeriodРЎomboBox->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->PeriodРЎomboBox->Text = "Р•Р¶РµРіРѕРґРЅРѕ";
 
-			TotalPaymentTextBox->ReadOnly = true;// Нельзя писать в поле с итоговой суммой 
-			OverPaymentTextBox->ReadOnly = true; // Нельзя писать в поле с переплатой
-			CalculationResultsPanel->Visible = false; // Пока скрыть результаты расчета
-			TablePanel->Visible = false; // Пока скрыть таблицу
+			TotalPaymentTextBox->ReadOnly = true;// РќРµР»СЊР·СЏ РїРёСЃР°С‚СЊ РІ РїРѕР»Рµ СЃ РёС‚РѕРіРѕРІРѕР№ СЃСѓРјРјРѕР№ 
+			OverPaymentTextBox->ReadOnly = true; // РќРµР»СЊР·СЏ РїРёСЃР°С‚СЊ РІ РїРѕР»Рµ СЃ РїРµСЂРµРїР»Р°С‚РѕР№
+			CalculationResultsPanel->Visible = false; // РџРѕРєР° СЃРєСЂС‹С‚СЊ СЂРµР·СѓР»СЊС‚Р°С‚С‹ СЂР°СЃС‡РµС‚Р°
+			TablePanel->Visible = false; // РџРѕРєР° СЃРєСЂС‹С‚СЊ С‚Р°Р±Р»РёС†Сѓ
 		}
 
 	protected:
@@ -76,13 +76,13 @@ namespace Calculator {
 
 	private: System::Windows::Forms::TextBox^ DateTextBox;
 	private: System::Windows::Forms::Label^ DateText;
-	private: System::Windows::Forms::ComboBox^ PeriodСomboBox;
+	private: System::Windows::Forms::ComboBox^ PeriodРЎomboBox;
 	private: System::Windows::Forms::Label^ PeriodText;
 	private: System::Windows::Forms::Button^ CalculateButton;
 	private: System::Windows::Forms::Panel^ CalculationResultsPanel;
 	private: System::Windows::Forms::TextBox^ TotalPaymentTextBox;
 	private: System::Windows::Forms::Label^ TotalPaymentText;
-	private: System::Windows::Forms::Label^ СalculationResultsText;
+	private: System::Windows::Forms::Label^ РЎalculationResultsText;
 	private: System::Windows::Forms::TextBox^ OverPaymentTextBox;
 	private: System::Windows::Forms::Label^ OverPaymentText;
 	protected:
@@ -102,7 +102,7 @@ namespace Calculator {
 			this->OptionsPanel = (gcnew System::Windows::Forms::Panel());
 			this->CalculateButton = (gcnew System::Windows::Forms::Button());
 			this->PeriodText = (gcnew System::Windows::Forms::Label());
-			this->PeriodСomboBox = (gcnew System::Windows::Forms::ComboBox());
+			this->PeriodРЎomboBox = (gcnew System::Windows::Forms::ComboBox());
 			this->DateTextBox = (gcnew System::Windows::Forms::TextBox());
 			this->DateText = (gcnew System::Windows::Forms::Label());
 			this->TimeTextBox = (gcnew System::Windows::Forms::TextBox());
@@ -117,7 +117,7 @@ namespace Calculator {
 			this->OverPaymentText = (gcnew System::Windows::Forms::Label());
 			this->TotalPaymentTextBox = (gcnew System::Windows::Forms::TextBox());
 			this->TotalPaymentText = (gcnew System::Windows::Forms::Label());
-			this->СalculationResultsText = (gcnew System::Windows::Forms::Label());
+			this->РЎalculationResultsText = (gcnew System::Windows::Forms::Label());
 			this->TablePanel = (gcnew System::Windows::Forms::Panel());
 			this->HeaderPanel->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->eventLog1))->BeginInit();
@@ -146,7 +146,7 @@ namespace Calculator {
 			this->HeaderText->Name = L"HeaderText";
 			this->HeaderText->Size = System::Drawing::Size(482, 72);
 			this->HeaderText->TabIndex = 0;
-			this->HeaderText->Text = L"Калькулятор выплат по кредиту";
+			this->HeaderText->Text = L"РљР°Р»СЊРєСѓР»СЏС‚РѕСЂ РІС‹РїР»Р°С‚ РїРѕ РєСЂРµРґРёС‚Сѓ";
 			this->HeaderText->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// eventLog1
@@ -162,7 +162,7 @@ namespace Calculator {
 				static_cast<System::Int32>(static_cast<System::Byte>(238)));
 			this->OptionsPanel->Controls->Add(this->CalculateButton);
 			this->OptionsPanel->Controls->Add(this->PeriodText);
-			this->OptionsPanel->Controls->Add(this->PeriodСomboBox);
+			this->OptionsPanel->Controls->Add(this->PeriodРЎomboBox);
 			this->OptionsPanel->Controls->Add(this->DateTextBox);
 			this->OptionsPanel->Controls->Add(this->DateText);
 			this->OptionsPanel->Controls->Add(this->TimeTextBox);
@@ -189,7 +189,7 @@ namespace Calculator {
 			this->CalculateButton->Name = L"CalculateButton";
 			this->CalculateButton->Size = System::Drawing::Size(175, 46);
 			this->CalculateButton->TabIndex = 11;
-			this->CalculateButton->Text = L"Рассчитать ";
+			this->CalculateButton->Text = L"Р Р°СЃСЃС‡РёС‚Р°С‚СЊ ";
 			this->CalculateButton->UseVisualStyleBackColor = false;
 			this->CalculateButton->Click += gcnew System::EventHandler(this, &Main::CalculateButton_Click);
 			// 
@@ -202,19 +202,19 @@ namespace Calculator {
 			this->PeriodText->Name = L"PeriodText";
 			this->PeriodText->Size = System::Drawing::Size(216, 24);
 			this->PeriodText->TabIndex = 10;
-			this->PeriodText->Text = L"Периодичность погашения";
+			this->PeriodText->Text = L"РџРµСЂРёРѕРґРёС‡РЅРѕСЃС‚СЊ РїРѕРіР°С€РµРЅРёСЏ";
 			// 
-			// PeriodСomboBox
+			// PeriodРЎomboBox
 			// 
-			this->PeriodСomboBox->BackColor = System::Drawing::Color::White;
-			this->PeriodСomboBox->Font = (gcnew System::Drawing::Font(L"Arial Narrow", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->PeriodРЎomboBox->BackColor = System::Drawing::Color::White;
+			this->PeriodРЎomboBox->Font = (gcnew System::Drawing::Font(L"Arial Narrow", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->PeriodСomboBox->FormattingEnabled = true;
-			this->PeriodСomboBox->Location = System::Drawing::Point(225, 131);
-			this->PeriodСomboBox->Name = L"PeriodСomboBox";
-			this->PeriodСomboBox->Size = System::Drawing::Size(151, 32);
-			this->PeriodСomboBox->TabIndex = 9;
-			this->PeriodСomboBox->Text = L"Ежегодно";
+			this->PeriodРЎomboBox->FormattingEnabled = true;
+			this->PeriodРЎomboBox->Location = System::Drawing::Point(225, 131);
+			this->PeriodРЎomboBox->Name = L"PeriodРЎomboBox";
+			this->PeriodРЎomboBox->Size = System::Drawing::Size(151, 32);
+			this->PeriodРЎomboBox->TabIndex = 9;
+			this->PeriodРЎomboBox->Text = L"Р•Р¶РµРіРѕРґРЅРѕ";
 			// 
 			// DateTextBox
 			// 
@@ -238,7 +238,7 @@ namespace Calculator {
 			this->DateText->Name = L"DateText";
 			this->DateText->Size = System::Drawing::Size(110, 24);
 			this->DateText->TabIndex = 7;
-			this->DateText->Text = L"Дата выдачи";
+			this->DateText->Text = L"Р”Р°С‚Р° РІС‹РґР°С‡Рё";
 			// 
 			// TimeTextBox
 			// 
@@ -262,7 +262,7 @@ namespace Calculator {
 			this->TimeText->Name = L"TimeText";
 			this->TimeText->Size = System::Drawing::Size(165, 24);
 			this->TimeText->TabIndex = 5;
-			this->TimeText->Text = L"Срок кредита (годы)";
+			this->TimeText->Text = L"РЎСЂРѕРє РєСЂРµРґРёС‚Р° (РіРѕРґС‹)";
 			// 
 			// PercentText
 			// 
@@ -273,7 +273,7 @@ namespace Calculator {
 			this->PercentText->Name = L"PercentText";
 			this->PercentText->Size = System::Drawing::Size(87, 24);
 			this->PercentText->TabIndex = 4;
-			this->PercentText->Text = L"Проценты";
+			this->PercentText->Text = L"РџСЂРѕС†РµРЅС‚С‹";
 			// 
 			// PercentTextBox
 			// 
@@ -311,7 +311,7 @@ namespace Calculator {
 			this->SumText->Name = L"SumText";
 			this->SumText->Size = System::Drawing::Size(128, 24);
 			this->SumText->TabIndex = 1;
-			this->SumText->Text = L"Сумма кредита";
+			this->SumText->Text = L"РЎСѓРјРјР° РєСЂРµРґРёС‚Р°";
 			// 
 			// OptionsText
 			// 
@@ -322,7 +322,7 @@ namespace Calculator {
 			this->OptionsText->Name = L"OptionsText";
 			this->OptionsText->Size = System::Drawing::Size(201, 30);
 			this->OptionsText->TabIndex = 0;
-			this->OptionsText->Text = L"Параметры кредита";
+			this->OptionsText->Text = L"РџР°СЂР°РјРµС‚СЂС‹ РєСЂРµРґРёС‚Р°";
 			// 
 			// CalculationResultsPanel
 			// 
@@ -335,7 +335,7 @@ namespace Calculator {
 			this->CalculationResultsPanel->Controls->Add(this->OverPaymentText);
 			this->CalculationResultsPanel->Controls->Add(this->TotalPaymentTextBox);
 			this->CalculationResultsPanel->Controls->Add(this->TotalPaymentText);
-			this->CalculationResultsPanel->Controls->Add(this->СalculationResultsText);
+			this->CalculationResultsPanel->Controls->Add(this->РЎalculationResultsText);
 			this->CalculationResultsPanel->Location = System::Drawing::Point(12, 336);
 			this->CalculationResultsPanel->Name = L"CalculationResultsPanel";
 			this->CalculationResultsPanel->Size = System::Drawing::Size(458, 136);
@@ -362,7 +362,7 @@ namespace Calculator {
 			this->OverPaymentText->Name = L"OverPaymentText";
 			this->OverPaymentText->Size = System::Drawing::Size(94, 24);
 			this->OverPaymentText->TabIndex = 14;
-			this->OverPaymentText->Text = L"Переплата";
+			this->OverPaymentText->Text = L"РџРµСЂРµРїР»Р°С‚Р°";
 			// 
 			// TotalPaymentTextBox
 			// 
@@ -385,18 +385,18 @@ namespace Calculator {
 			this->TotalPaymentText->Name = L"TotalPaymentText";
 			this->TotalPaymentText->Size = System::Drawing::Size(134, 24);
 			this->TotalPaymentText->TabIndex = 12;
-			this->TotalPaymentText->Text = L"Общая выплата";
+			this->TotalPaymentText->Text = L"РћР±С‰Р°СЏ РІС‹РїР»Р°С‚Р°";
 			// 
-			// СalculationResultsText
+			// РЎalculationResultsText
 			// 
-			this->СalculationResultsText->AutoSize = true;
-			this->СalculationResultsText->Font = (gcnew System::Drawing::Font(L"Arial Narrow", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->РЎalculationResultsText->AutoSize = true;
+			this->РЎalculationResultsText->Font = (gcnew System::Drawing::Font(L"Arial Narrow", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->СalculationResultsText->Location = System::Drawing::Point(2, 2);
-			this->СalculationResultsText->Name = L"СalculationResultsText";
-			this->СalculationResultsText->Size = System::Drawing::Size(203, 30);
-			this->СalculationResultsText->TabIndex = 12;
-			this->СalculationResultsText->Text = L"Результаты расчета";
+			this->РЎalculationResultsText->Location = System::Drawing::Point(2, 2);
+			this->РЎalculationResultsText->Name = L"РЎalculationResultsText";
+			this->РЎalculationResultsText->Size = System::Drawing::Size(203, 30);
+			this->РЎalculationResultsText->TabIndex = 12;
+			this->РЎalculationResultsText->Text = L"Р РµР·СѓР»СЊС‚Р°С‚С‹ СЂР°СЃС‡РµС‚Р°";
 			// 
 			// TablePanel
 			// 
@@ -434,37 +434,37 @@ namespace Calculator {
 
 		}
 #pragma endregion
-		// Метод вызывается при нажатии кнопки Расчитать
+		// РњРµС‚РѕРґ РІС‹Р·С‹РІР°РµС‚СЃСЏ РїСЂРё РЅР°Р¶Р°С‚РёРё РєРЅРѕРїРєРё Р Р°СЃС‡РёС‚Р°С‚СЊ
 	private: System::Void CalculateButton_Click(System::Object^ sender, System::EventArgs^ e) {
-		// Выдать ошибку если сумма кредита указана неверно
+		// Р’С‹РґР°С‚СЊ РѕС€РёР±РєСѓ РµСЃР»Рё СЃСѓРјРјР° РєСЂРµРґРёС‚Р° СѓРєР°Р·Р°РЅР° РЅРµРІРµСЂРЅРѕ
 		if (!double::TryParse(this->SumTextBox->Text->Replace('.', ','), sum)) {
-			Error^ view = (gcnew Error("Неправильно указана сумма кредита!!!"));
+			Error^ view = (gcnew Error("РќРµРїСЂР°РІРёР»СЊРЅРѕ СѓРєР°Р·Р°РЅР° СЃСѓРјРјР° РєСЂРµРґРёС‚Р°!!!"));
 			view->ShowDialog();
 			return;
 		}
 
-		// Выдать ошибку если неправильно указана процентная ставка
+		// Р’С‹РґР°С‚СЊ РѕС€РёР±РєСѓ РµСЃР»Рё РЅРµРїСЂР°РІРёР»СЊРЅРѕ СѓРєР°Р·Р°РЅР° РїСЂРѕС†РµРЅС‚РЅР°СЏ СЃС‚Р°РІРєР°
 		if (!double::TryParse(this->PercentTextBox->Text->Replace('.', ','), percent)) {
-			Error^ view = (gcnew Error("Неправильно указана процентная ставка!!!"));
+			Error^ view = (gcnew Error("РќРµРїСЂР°РІРёР»СЊРЅРѕ СѓРєР°Р·Р°РЅР° РїСЂРѕС†РµРЅС‚РЅР°СЏ СЃС‚Р°РІРєР°!!!"));
 			view->ShowDialog();
 			return;
 		}
 
-		// Выдать ошибку если процентная ставка меньше 0
+		// Р’С‹РґР°С‚СЊ РѕС€РёР±РєСѓ РµСЃР»Рё РїСЂРѕС†РµРЅС‚РЅР°СЏ СЃС‚Р°РІРєР° РјРµРЅСЊС€Рµ 0
 		if (percent < 0) {
-			Error^ view = (gcnew Error("Неправильно указана процентная ставка!!!"));
+			Error^ view = (gcnew Error("РќРµРїСЂР°РІРёР»СЊРЅРѕ СѓРєР°Р·Р°РЅР° РїСЂРѕС†РµРЅС‚РЅР°СЏ СЃС‚Р°РІРєР°!!!"));
 			view->ShowDialog();
 			return;
 		}
 
-		// Выдать ошибку если неправильно указан срок кредита
+		// Р’С‹РґР°С‚СЊ РѕС€РёР±РєСѓ РµСЃР»Рё РЅРµРїСЂР°РІРёР»СЊРЅРѕ СѓРєР°Р·Р°РЅ СЃСЂРѕРє РєСЂРµРґРёС‚Р°
 		if (!double::TryParse(this->TimeTextBox->Text->Replace('.', ','), time)) {
-			Error^ view = (gcnew Error("Неправильно указан срок кредита!!!"));
+			Error^ view = (gcnew Error("РќРµРїСЂР°РІРёР»СЊРЅРѕ СѓРєР°Р·Р°РЅ СЃСЂРѕРє РєСЂРµРґРёС‚Р°!!!"));
 			view->ShowDialog();
 			return;
 		}
 
-		// Попытаться получить время, если время указано неверно, то в таблице строки будут идти по возрастанию начиная с 1
+		// РџРѕРїС‹С‚Р°С‚СЊСЃСЏ РїРѕР»СѓС‡РёС‚СЊ РІСЂРµРјСЏ, РµСЃР»Рё РІСЂРµРјСЏ СѓРєР°Р·Р°РЅРѕ РЅРµРІРµСЂРЅРѕ, С‚Рѕ РІ С‚Р°Р±Р»РёС†Рµ СЃС‚СЂРѕРєРё Р±СѓРґСѓС‚ РёРґС‚Рё РїРѕ РІРѕР·СЂР°СЃС‚Р°РЅРёСЋ РЅР°С‡РёРЅР°СЏ СЃ 1
 		try {
 			date = Convert::ToDateTime(this->DateTextBox->Text);
 			datePrint = true;
@@ -473,29 +473,29 @@ namespace Calculator {
 			datePrint = false;
 		}
 
-		// Получение времени по периоду
-		period = this->PeriodСomboBox->Text;
-		if (period == "Ежегодно") {
+		// РџРѕР»СѓС‡РµРЅРёРµ РІСЂРµРјРµРЅРё РїРѕ РїРµСЂРёРѕРґСѓ
+		period = this->PeriodРЎomboBox->Text;
+		if (period == "Р•Р¶РµРіРѕРґРЅРѕ") {
 			percent /= 100;
 		}
-		else if (period == "Ежеквартально") {
+		else if (period == "Р•Р¶РµРєРІР°СЂС‚Р°Р»СЊРЅРѕ") {
 			percent /= 400;
 			time *= 4;
 		}
-		else if (period == "Ежемесячно") {
+		else if (period == "Р•Р¶РµРјРµСЃСЏС‡РЅРѕ") {
 			percent /= 1200;
 			time *= 12;
 		}
 
-		// Расчеты
+		// Р Р°СЃС‡РµС‚С‹
 		double pay = sum * (percent + (percent / (System::Math::Pow(1 + percent, time) - 1)));
 		this->TotalPaymentTextBox->Text = Convert::ToString(Math::Round(pay * time * 100) / 100);
 		this->OverPaymentTextBox->Text = Convert::ToString(Math::Round((pay * time - sum) * 100) / 100);
 
 		/// <summary>
-		/// Создание таблицы
+		/// РЎРѕР·РґР°РЅРёРµ С‚Р°Р±Р»РёС†С‹
 		/// </summary>
-		// Первый столбик
+		// РџРµСЂРІС‹Р№ СЃС‚РѕР»Р±РёРє
 		this->TablePanel->Controls->Clear();
 		System::Windows::Forms::Panel^ p1 = (gcnew System::Windows::Forms::Panel());
 		this->TablePanel->Controls->Add(p1);
@@ -511,10 +511,10 @@ namespace Calculator {
 		l1->Name = L"label";
 		l1->Size = System::Drawing::Size(85, 35);
 		l1->TabIndex = 0;
-		l1->Text = L"Дата выплаты";
+		l1->Text = L"Р”Р°С‚Р° РІС‹РїР»Р°С‚С‹";
 		l1->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 
-		// Второй столбик
+		// Р’С‚РѕСЂРѕР№ СЃС‚РѕР»Р±РёРє
 		System::Windows::Forms::Panel^ p2 = (gcnew System::Windows::Forms::Panel());
 		this->TablePanel->Controls->Add(p2);
 		p2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(217)), static_cast<System::Int32>(static_cast<System::Byte>(217)), static_cast<System::Int32>(static_cast<System::Byte>(217)));
@@ -529,10 +529,10 @@ namespace Calculator {
 		l2->Name = L"label";
 		l2->Size = System::Drawing::Size(85, 35);
 		l2->TabIndex = 0;
-		l2->Text = L"Сумма выплаты";
+		l2->Text = L"РЎСѓРјРјР° РІС‹РїР»Р°С‚С‹";
 		l2->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 
-		// Третий столбик
+		// РўСЂРµС‚РёР№ СЃС‚РѕР»Р±РёРє
 		System::Windows::Forms::Panel^ p3 = (gcnew System::Windows::Forms::Panel());
 		this->TablePanel->Controls->Add(p3);
 		p3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(217)), static_cast<System::Int32>(static_cast<System::Byte>(217)), static_cast<System::Int32>(static_cast<System::Byte>(217)));
@@ -547,10 +547,10 @@ namespace Calculator {
 		l3->Name = L"label";
 		l3->Size = System::Drawing::Size(85, 35);
 		l3->TabIndex = 0;
-		l3->Text = L"Долговая часть";
+		l3->Text = L"Р”РѕР»РіРѕРІР°СЏ С‡Р°СЃС‚СЊ";
 		l3->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 
-		// Четвертый столбик
+		// Р§РµС‚РІРµСЂС‚С‹Р№ СЃС‚РѕР»Р±РёРє
 		System::Windows::Forms::Panel^ p4 = (gcnew System::Windows::Forms::Panel());
 		this->TablePanel->Controls->Add(p4);
 		p4->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(217)), static_cast<System::Int32>(static_cast<System::Byte>(217)), static_cast<System::Int32>(static_cast<System::Byte>(217)));
@@ -565,10 +565,10 @@ namespace Calculator {
 		l4->Name = L"label";
 		l4->Size = System::Drawing::Size(85, 35);
 		l4->TabIndex = 0;
-		l4->Text = L"Процентная часть";
+		l4->Text = L"РџСЂРѕС†РµРЅС‚РЅР°СЏ С‡Р°СЃС‚СЊ";
 		l4->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 
-		// Заполнение данных
+		// Р—Р°РїРѕР»РЅРµРЅРёРµ РґР°РЅРЅС‹С…
 		double s1 = sum;
 		for (int i = 1; i < time + 0.5; i++) {
 			for (int j = 0; j < 4; j++) {
@@ -606,13 +606,13 @@ namespace Calculator {
 				label->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 
 			}
-			if (period == "Ежегодно") {
+			if (period == "Р•Р¶РµРіРѕРґРЅРѕ") {
 				date = date.AddYears(1);
 			}
-			else if (period == "Ежеквартально") {
+			else if (period == "Р•Р¶РµРєРІР°СЂС‚Р°Р»СЊРЅРѕ") {
 				date = date.AddMonths(3);
 			}
-			else if (period == "Ежемесячно") {
+			else if (period == "Р•Р¶РµРјРµСЃСЏС‡РЅРѕ") {
 				date = date.AddMonths(1);
 			}
 			s1 -= (pay - s1 * percent);
