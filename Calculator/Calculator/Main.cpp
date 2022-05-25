@@ -1,6 +1,6 @@
 #include "Main.h"
 #include <Windows.h>
-using namespace Calculator; // Название проекта
+using namespace Calculator; // РќР°Р·РІР°РЅРёРµ РїСЂРѕРµРєС‚Р°
 int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
