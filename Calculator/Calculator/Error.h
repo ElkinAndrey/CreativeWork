@@ -10,7 +10,7 @@ namespace Calculator {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Сводка для MyForm1
+	/// РЎРІРѕРґРєР° РґР»СЏ MyForm1
 	/// </summary>
 	public ref class Error : public System::Windows::Forms::Form
 	{
@@ -23,7 +23,7 @@ namespace Calculator {
 
 	protected:
 		/// <summary>
-		/// Освободить все используемые ресурсы.
+		/// РћСЃРІРѕР±РѕРґРёС‚СЊ РІСЃРµ РёСЃРїРѕР»СЊР·СѓРµРјС‹Рµ СЂРµСЃСѓСЂСЃС‹.
 		/// </summary>
 		~Error()
 		{
@@ -42,14 +42,14 @@ namespace Calculator {
 
 	private:
 		/// <summary>
-		/// Обязательная переменная конструктора.
+		/// РћР±СЏР·Р°С‚РµР»СЊРЅР°СЏ РїРµСЂРµРјРµРЅРЅР°СЏ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°.
 		/// </summary>
 		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Требуемый метод для поддержки конструктора — не изменяйте 
-		/// содержимое этого метода с помощью редактора кода.
+		/// РўСЂРµР±СѓРµРјС‹Р№ РјРµС‚РѕРґ РґР»СЏ РїРѕРґРґРµСЂР¶РєРё РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР° вЂ” РЅРµ РёР·РјРµРЅСЏР№С‚Рµ 
+		/// СЃРѕРґРµСЂР¶РёРјРѕРµ СЌС‚РѕРіРѕ РјРµС‚РѕРґР° СЃ РїРѕРјРѕС‰СЊСЋ СЂРµРґР°РєС‚РѕСЂР° РєРѕРґР°.
 		/// </summary>
 		void InitializeComponent(void)
 		{
@@ -96,7 +96,7 @@ namespace Calculator {
 			this->button2->Size = System::Drawing::Size(112, 46);
 			this->button2->TabIndex = 12;
 			this->button2->TabStop = false;
-			this->button2->Text = L"Ок";
+			this->button2->Text = L"РћРє";
 			this->button2->UseVisualStyleBackColor = false;
 			this->button2->Click += gcnew System::EventHandler(this, &Error::button2_Click);
 			// 
